@@ -7,7 +7,8 @@ export const ALLITEMS_ROUTE: Route = {
     path: 'all-items',
     component: AllItemsComponent,
     data: {
-        authorities: [],
+        authorities: ['ROLE_USER'],
         pageTitle: 'home.title'
-    }
+    },
+    canActivate: [UserRouteAccessService]
 };

@@ -5,6 +5,8 @@ import { TestprojectSharedModule } from '../shared';
 
 import { ALLITEMS_ROUTE, AllItemsComponent } from './';
 
+import { ItemsService } from './';
+
 @NgModule({
     imports: [
         TestprojectSharedModule,
@@ -15,8 +17,7 @@ import { ALLITEMS_ROUTE, AllItemsComponent } from './';
     ],
     entryComponents: [
     ],
-    providers: [
-    ],
+    providers: [ItemsService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TestprojectAllItemsModule {}
