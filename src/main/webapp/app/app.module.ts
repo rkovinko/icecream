@@ -8,6 +8,7 @@ import { TestprojectSharedModule, UserRouteAccessService } from './shared';
 import { TestprojectHomeModule } from './home/home.module';
 import { TestprojectAdminModule } from './admin/admin.module';
 import { TestprojectAccountModule } from './account/account.module';
+import {TestprojectAllItemsModule} from './allitems/allitems.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -34,6 +35,7 @@ import {
         TestprojectHomeModule,
         TestprojectAdminModule,
         TestprojectAccountModule,
+        TestprojectAllItemsModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [

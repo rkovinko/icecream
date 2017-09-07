@@ -8,7 +8,8 @@ Navbar
 }
 
 .jh-navbar {
-    background-color: #353d47;
+    background-color: #828081;
+    background: linear-gradient(to bottom, #828081 0%,#5e5e5e 100%);
     padding: .2em 1em;
     .profile-image {
         margin: -10px 0px;
@@ -74,7 +75,6 @@ Logo styles
             width: 70px;
             display: inline-block;
             vertical-align: middle;
-            background: url("../../../content/images/logo-jhipster.png") no-repeat center center;
             background-size: contain;
         }
     }
