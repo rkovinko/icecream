@@ -7,12 +7,9 @@ import { environment } from '../../environments/environment'
 @Injectable()
 export class ProductsService {
 
-    constructor(private httpService:HttpService) {
-
-    }
+    constructor(private httpService: HttpService) {}
 
     public getItems() {
         return this.httpService.get(environment.anyList);
     }
-
 }

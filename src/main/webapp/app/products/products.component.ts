@@ -19,13 +19,13 @@ export class ProductsComponent implements OnInit {
         private eventManager: JhiEventManager,
         private itemsService: ProductsService
     ) {
-        itemsService.getItems().subscribe(data => {
-            console.log(data);
+        itemsService.getItems().subscribe( (data) => {
+            console.log ('data', data);
         });
 
     }
 
     ngOnInit() {
-        console.log('all items')
+        console.log ('all items')
     }
 }

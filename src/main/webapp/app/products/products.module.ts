@@ -13,12 +13,10 @@ import { HttpService } from './http.service'
         TestprojectSharedModule,
         RouterModule.forRoot([ PRODUCTS_ROUTE ], { useHash: true })
     ],
-    declarations: [
-        ProductsComponent,
-    ],
+    declarations: [ProductsComponent],
     entryComponents: [
     ],
-    providers: [ProductsService,HttpService],
+    providers: [ProductsService, HttpService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TestprojectProductModule {}

@@ -120,7 +120,7 @@
                 </ul>
             </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto languages">
             <li class="nav-item pointer" *ngIf="languages && languages.length > 1">
                 <a class="" *ngFor="let language of languages" [jhiActiveMenu]="language" href="javascript:void(0);" (click)="changeLanguage(language);">
                     {{language | findLanguageFromKey}}

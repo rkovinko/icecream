@@ -7,6 +7,14 @@ Navbar
     color: #ccc
 }
 
+.languages {
+    a {color: #fff;}
+
+    a.active{
+        color: red;
+    }
+}
+
 .jh-navbar {
     background-color: #828081;
     background: linear-gradient(to bottom, #828081 0%,#5e5e5e 100%);

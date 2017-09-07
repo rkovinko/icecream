@@ -1,5 +1,5 @@
  export const environment = {
    production: false,
-   host: './_mocks/',
+   host: './app/mocks/',
    anyList: 'any.json'
  }
