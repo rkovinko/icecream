@@ -77,7 +77,6 @@ public class AccountResource {
                             managedUserVM.getEmail().toLowerCase(), managedUserVM.getImageUrl(),
                             managedUserVM.getLangKey());
 
-                    mailService.sendActivationEmail(user);
                     return new ResponseEntity<>(HttpStatus.CREATED);
                 })
         );

@@ -99,12 +99,12 @@ public class UserService {
         newUser.setEmail(email);
         newUser.setImageUrl(imageUrl);
         newUser.setLangKey(langKey);
-        // new user is not active
-        newUser.setActivated(false);
-        // new user gets registration key
-        newUser.setActivationKey(RandomUtil.generateActivationKey());
+        // new user is active
+        newUser.setActivated(true);
+        newUser.setActivationKey(null);
         authorities.add(authority);
         newUser.setAuthorities(authorities);
+
         userRepository.save(newUser);
         log.debug("Created Information for User: {}", newUser);
         return newUser;
