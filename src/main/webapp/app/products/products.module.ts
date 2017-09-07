@@ -3,21 +3,22 @@ import { RouterModule } from '@angular/router';
 
 import { TestprojectSharedModule } from '../shared';
 
-import { ALLITEMS_ROUTE, AllItemsComponent } from './';
+import { PRODUCTS_ROUTE, ProductsComponent } from './';
 
-import { ItemsService } from './';
+import { ProductsService } from './';
+import { HttpService } from './http.service'
 
 @NgModule({
     imports: [
         TestprojectSharedModule,
-        RouterModule.forRoot([ ALLITEMS_ROUTE ], { useHash: true })
+        RouterModule.forRoot([ PRODUCTS_ROUTE ], { useHash: true })
     ],
     declarations: [
-        AllItemsComponent,
+        ProductsComponent,
     ],
     entryComponents: [
     ],
-    providers: [ItemsService],
+    providers: [ProductsService,HttpService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class TestprojectAllItemsModule {}
+export class TestprojectProductModule {}

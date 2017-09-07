@@ -1,11 +1,11 @@
 import { Route } from '@angular/router';
 
 import { UserRouteAccessService } from '../shared';
-import { AllItemsComponent } from './';
+import { ProductsComponent } from './';
 
-export const ALLITEMS_ROUTE: Route = {
+export const PRODUCTS_ROUTE: Route = {
     path: 'all-items',
-    component: AllItemsComponent,
+    component: ProductsComponent,
     data: {
         authorities: ['ROLE_USER'],
         pageTitle: 'home.title'
