@@ -53,6 +53,8 @@ public class UserDTO {
 
     private Set<String> authorities;
 
+    private String referredBy;
+
     public UserDTO() {
         // Empty constructor needed for Jackson.
     }
@@ -63,6 +65,7 @@ public class UserDTO {
             user.getCreatedBy(), user.getCreatedDate(), user.getLastModifiedBy(), user.getLastModifiedDate(),
             user.getAuthorities().stream().map(Authority::getName)
                 .collect(Collectors.toSet()));
+        this.referredBy = user.getReferredBy();
     }
 
     public UserDTO(Long id, String login, String firstName, String lastName,
@@ -147,6 +150,14 @@ public class UserDTO {
 
     public Set<String> getAuthorities() {
         return authorities;
+    }
+
+    public String getReferredBy() {
+        return referredBy;
+    }
+
+    public void setReferredBy(String referredBy) {
+        this.referredBy = referredBy;
     }
 
     @Override

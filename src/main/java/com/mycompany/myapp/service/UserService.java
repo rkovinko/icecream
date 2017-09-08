@@ -85,7 +85,7 @@ public class UserService {
     }
 
     public User createUser(String login, String password, String firstName, String lastName, String email,
-        String imageUrl, String langKey) {
+        String imageUrl, String langKey, String referredBy) {
 
         User newUser = new User();
         Authority authority = authorityRepository.findOne(AuthoritiesConstants.USER);
@@ -104,6 +104,7 @@ public class UserService {
         newUser.setActivationKey(null);
         authorities.add(authority);
         newUser.setAuthorities(authorities);
+        newUser.setReferredBy(referredBy);
 
         userRepository.save(newUser);
         log.debug("Created Information for User: {}", newUser);
